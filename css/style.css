@@ -1,0 +1,658 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+:root {
+    --main-color: #0078ff;
+    --second-color: #ffffff6f;
+    --num-color: #ffffff;
+    --black-color: #000000;
+    --p-last-color: #748182;
+    --section-color: #F5F5F5;
+}
+
+
+.sction-title {
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+    /* width: 100%; */
+    /* margin: 0 auto; */
+}
+
+.sction-title::after {
+    content: "";
+    background-image: url(./imges/dots.png);
+    width: 100%;
+    height: 50%;
+    /* display: inline-block; */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+}
+
+
+.second-color {
+    color: var(--second-color);
+}
+
+.num-color {
+    color: var(--num-color);
+}
+
+.black-color {
+    color: var(--black-color);
+}
+
+.p-last-color {
+    color: var(--p-last-color);
+}
+
+.section-color {
+    color: var(--section-color);
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* start navbar */
+
+#navbar .navbar {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#navbar .first-navbar {
+    background-color: transparent;
+    position: absolute;
+    padding: 2rem 0;
+}
+
+
+#navbar .first-navbar .navbar-brand {
+    color: #fff;
+}
+
+#navbar .first-navbar .nav-link {
+    color: #fff;
+}
+
+#navbar .first-navbar .nav-link::after {
+    background-color: #fff;
+}
+
+#navbar .second-navbar {
+    background-color: #fff;
+    position: fixed;
+    padding: 1rem 0;
+}
+
+#navbar nav .navbar-brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbar .nav-link {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+    position: relative;
+}
+
+#navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: width .5s;
+}
+
+#navbar .nav-link.active::after {
+    width: 100%;
+}
+
+#navbar .icons a {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/* #navbar .container{
+    padding: 1rem 0;
+    font-size: 13px;
+} 
+
+#navbar .active::after{
+    color: var(--second-color) !important;
+    font-weight: 500;
+}
+
+nav .nav-link{
+    position: relative;
+}
+nav .nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 3px;
+    background-color: var(--second-color);
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s;
+}
+
+nav .nav-link:hover::after{
+    width: 95%;
+
+} */
+/* end navbar */
+
+
+/* start header */
+
+#Home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../css/imges/bg.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+
+}
+
+
+.child-1 h1 {
+    font-size: 4.5rem;
+    font-weight: 200;
+    color: var(--num-color);
+}
+
+
+.icon-1 {
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.466));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p2 {
+    font-weight: 200;
+    padding-right: .5rem;
+}
+
+
+/* end header */
+
+/* start about */
+
+#about .info {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    z-index: 2;
+}
+
+.img-container {
+    padding: 0 0 0 .9375rem;
+    position: relative;
+}
+
+.img-container::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: -20px;
+    bottom: -30px;
+    background-image: url(./imges/dots.png);
+    z-index: -1;
+}
+
+
+.about-me p {
+    color: var(--p-last-color) !important;
+}
+
+
+
+.inner .pad {
+    margin: 10px;
+}
+
+.box-shadow {
+    padding: 3rem;
+}
+
+.prog {
+    background-color: black !important;
+    border-radius: 2px;
+}
+
+
+#about .custom-btn a {
+    font-size: .8rem;
+    padding: .7rem 1.8rem;
+    transition: all .6s;
+}
+
+.custom-btn a:first-child {
+    background-color: #000000;
+    border: 1px solid #000;
+}
+
+.custom-btn a:first-child:hover {
+    background-color: #fff;
+
+}
+
+/* end about */
+
+
+/* start services */
+#Services .card {
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+#Services .card:hover .icon {
+    background-color: #000;
+    color: #fff;
+}
+
+#Services .icon {
+    background-color: #F8F9FA;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    transition: all .5s;
+}
+
+/* end services */
+
+/*  start Portfolio  */
+
+#Work .layer {
+    top: 10px;
+    left: 5px;
+    right: 5px;
+    bottom: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0;
+    transition: all .5s;
+}
+
+#Work .item:hover .layer {
+    opacity: 1;
+    top: 5px;
+    bottom: 5px;
+}
+
+#Work .layer h6 {
+    position: relative;
+    top: -5%;
+    font-size: .8rem;
+    font-weight: 700;
+    transition: all .5s;
+}
+
+#Work .item:hover .layer h6 {
+    top: 0;
+}
+
+#Work .icons a {
+    background-color: rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: .7rem;
+    border: 1px solid #000;
+}
+
+#Work .icons a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#Work .icons {
+    position: relative;
+    bottom: -5%;
+    transition: all .5s;
+}
+
+#Work .item:hover .icons {
+    bottom: 0;
+}
+
+#Work .carousel-control-next,
+.carousel-control-prev {
+    color: #343434;
+    width: 10%;
+}
+
+#Work .close-icon {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    color: #ccc;
+}
+
+#Work .close-icon:hover {
+    color: #fff;
+}
+
+#Work .current-img {
+    bottom: -22px;
+    right: 0;
+    color: #CCC;
+    font-size: .9rem;
+}
+
+#Work .carousel-inner {
+    overflow: hidden;
+}
+
+#Work .work-menu .nav-link {
+    background-color: transparent;
+    color: #000;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+    transition: width .5s;
+}
+
+
+#Work .work-menu .nav-link.active::after {
+    width: 100%;
+
+}
+
+#Work .work-menu .nav-link:hover {
+    cursor: pointer;
+}
+
+
+/* start Client */
+#Clients .img-slide {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+#Clients .carousel-indicators .slider-1 {
+    background-color: #d6d6d6;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#Clients .carousel-indicators .slider-1.active {
+    background-color: #869791;
+}
+
+#Clients .carousel-inner p {
+    padding-top: 1.2rem;
+    word-spacing: 2px;
+    font-size: .95rem;
+}
+
+#Clients .carousel-inner h5 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#Clients .carousel-inner span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    display: inline-block;
+    padding-bottom: 2rem;
+}
+/* end Client */
+
+
+/* start our team */
+
+#Team .card {
+    background-color: #5B5B5B;
+    color: #fff;
+
+}
+
+#Team .card-body h5 {
+    color: inherit;
+    font-size: 1.7rem;
+}
+
+#Team .card-body h6 {
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#Team .card-img {
+    overflow: hidden;
+}
+
+#Team .layer {
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 20%;
+    right: 20%;
+    background-color: #fefefef6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    transform: rotateY(-180deg);
+    opacity: 0;
+    transition: all .5s;
+}
+
+#Team .card-img:hover .layer,
+#Team .card:hover .layer {
+    transform: rotateY(0deg);
+    opacity: 1;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+#Team .card-img:hover img {
+    transform: scale(1.2);
+
+}
+
+#Team .card-img img {
+    transition: all .5s ease-in-out;
+}
+
+#Team .layer a {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    border: 1px solid #000;
+}
+
+#Team .layer a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+
+/* end our team */
+
+
+
+
+
+
+/* start counting  */
+
+
+
+/* strat counter */
+#counter span {
+    font-size: 30px;
+}
+
+#counter p {
+    font-weight: 600;
+    color: gray;
+
+}
+
+/* end counting  */
+
+
+
+
+
+/* start form */
+
+/* start contact */
+#Contact .icon {
+    background-color: #F4F4F4;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #343434;
+    font-size: 1.3rem;
+    transition: all .5s;
+}
+
+#Contact .contact-ways:hover .icon {
+    background-color: #000;
+    color: #fff;
+}
+
+#Contact #exampleFormControlTextarea1 {
+    height: 11rem;
+    max-height: 11rem;
+}
+
+#Contact .form-control {
+    background-color: #F4F4F4;
+    border: 0;
+    outline: none;
+}
+
+#Contact .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#Contact button {
+    background-color: #000;
+    border: 1px solid #000;
+    float: left;
+    padding: .7rem 3rem;
+    font-size: .9rem;
+}
+
+#Contact button:hover {
+    background-color: #fff;
+}
+
+/* end form */
+
+/* start footer */
+footer {
+    background-color: #1C1C1C;
+
+}
+
+footer p {
+    font-size: 13px;
+    word-spacing: 2px;
+    color: #748182;
+}
+
+/* end footer */
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
